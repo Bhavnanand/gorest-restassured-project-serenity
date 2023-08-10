@@ -40,14 +40,14 @@ public class UserCrudTest extends TestBase {
     @Title("Verify if the student was added to the application")
     @Test
     public void test002(){
-        HashMap<String,Object> userMap = userSteps.getSingleUser(userId);
+        HashMap<String,Object> userMap = (HashMap<String, Object>) userSteps.getSingleUser(userId);
         Assert.assertThat(userMap, hasValue(name));
         userId = (int) userMap.get("id");
     }
 
     @Test()
     public void test003(){
-   //   userSteps.userRecordUpdate(int userId,S);
+   //  userSteps.userRecordUpdate(int userId,S);
     }
     @Title("Delete the student and verify if the student is deleted!")
     @Test
